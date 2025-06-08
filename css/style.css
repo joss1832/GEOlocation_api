@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+}
+
+/*aqui comienzan las instrucciones del main para el encabezado*/
+main{
+    display: flex;
+    align-items: center;
+    
+}
+
+#logo{
+    width: 100px;
+}
+/*aqui terminan las instrucciones del main*/
+
+/*aqui comienzan las especificaciones del contenedor para pedir la ip al usuario*/
+
+#ip_usuario{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+/*aqui terminan las especificaciones del contenedor para pedir la ip al usuario*/
+
+/*aqui comienzan las especificaciones del contenedor del boton de busqueda*/
+#contenedor_boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+/*aqui terminan las especificaciones del contenedor del boton de busqueda*/
+
+/*aqui comienzan las especificaciones del contenedor general de la informacion de la ip*/
+
+#geolocalizacion{
+    display: none;
+    flex-wrap: wrap;
+}
+/*aqui terminan las especificaciones del contenedor general de la informacion de la ip*/
+
+/*especificaciones de las tarjetas donde se mostrara la informacion de la ip*/
+.cards{
+    background-color: whitesmoke;
+    flex-grow: 1;
+    flex-basis: 200;
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+    border-radius: 16px;
+    box-shadow: 5px 4px 5px darkgray;
+}
+
+
+/*especificaciones de las tarjetas donde se mostrara la informacion de la ip*/
+
+
+footer{
+    display: flex;
+}
