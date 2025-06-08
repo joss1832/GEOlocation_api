@@ -17,12 +17,7 @@ body{
     color: aliceblue;
 }
 
-/*aqui comienzan las instrucciones del main para el encabezado*/
-main{
-    display: flex;
-    align-items: center;
-    
-}
+
 
 #logo{
     width: 100px;
