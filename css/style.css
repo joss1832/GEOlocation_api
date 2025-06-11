@@ -9,20 +9,17 @@ html, body{
     padding: 0;
 }
 
-body{
-    background-image: url(../assets/img/fondo.jpg);
-    background-size: cover;       /* Ajusta la imagen para que cubra todo el fondo */
-    background-position: center;  /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que se repita */
-    color: aliceblue;
+
+body {
+  background-image: url('/assets/img/fondo2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  color: aliceblue;
+  font-family: Roboto
 }
 
-
-
-#logo{
-    width: 100px;
-}
-/*aqui terminan las instrucciones del main*/
 
 /*aqui comienzan las especificaciones del contenedor para pedir la ip al usuario*/
 
@@ -31,6 +28,8 @@ body{
     justify-content: center;
     gap: 5px;
     margin-top: 60px;
+    border-radius: 16px;
+    box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.5);
 }
 /*aqui terminan las especificaciones del contenedor para pedir la ip al usuario*/
 
@@ -40,36 +39,50 @@ body{
     justify-content: center;
     margin-top: 20px;
 }
+
+
 /*aqui terminan las especificaciones del contenedor del boton de busqueda*/
 
 /*aqui comienzan las especificaciones del contenedor general de la informacion de la ip*/
 
-#geolocalizacion{
-    display: none;
+#geolocalizacion {
+    display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 20px;
 }
+
 /*aqui terminan las especificaciones del contenedor general de la informacion de la ip*/
 
 /*especificaciones de las tarjetas donde se mostrara la informacion de la ip*/
-.cards{
-    
+.cards {
     flex-grow: 1;
-    width: 200px;
-    padding: 10px;
+    width: 300px;
+    padding: 20px;
     border-radius: 16px;
-    box-shadow: 5px 4px 5px darkgray;
-    margin-left: 10px;
+    box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background: rgba(0, 0, 0, 0.6); /* fondo semitransparente */
+    backdrop-filter: blur(10px); /* efecto vidrio esmerilado */
+    -webkit-backdrop-filter: blur(10px);
+    color: white; /* asegurarse de que el texto se lea bien */
 }
+
+.cards h2, .cards p {
+    color: #fff;
+    text-shadow: 1px 1px 2px black; 
+}
+
+
 
 
 /*especificaciones de las tarjetas donde se mostrara la informacion de la ip*/
 
 
-footer{
-    display: flex;
-}

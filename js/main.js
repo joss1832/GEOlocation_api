@@ -18,6 +18,7 @@ window.onload = () => {
 
         if (ip === ""){
             info1.innerHTML = '<p style="color: red;">Por favor ingresa una dirección IP.</p>';
+            info2.innerHTML = '<p style="color: red;">Por favor ingresa una dirección IP.</p>';
             return;
         }
 
@@ -42,12 +43,12 @@ window.onload = () => {
 
             info2.innerHTML = `
             <h3>Datos de contacto de abuso</h3>
-            <p>dirección: ${manejando_nulls(data.abuse.address)}</p>
-            <p>código de país: ${manejando_nulls(data.abuse.country_code)}</p>
-            <p>dirección de correo electrónico: ${manejando_nulls(data.abuse.email)} </p>
-            <p>nombre del contacto: ${manejando_nulls(data.abuse.name)} </p>
-            <p>rango de red: ${manejando_nulls(data.abuse.network)} </p>
-            <p>número de teléfono: ${manejando_nulls(data.abuse.phone)} </p>
+            <p>dirección: ${manejando_nulls(data.abuse?.address)}</p>
+            <p>código de país: ${manejando_nulls(data.abuse?.country_code)}</p>
+            <p>dirección de correo electrónico: ${manejando_nulls(data.abuse?.email)} </p>
+            <p>nombre del contacto: ${manejando_nulls(data.abuse?.name)} </p>
+            <p>rango de red: ${manejando_nulls(data.abuse?.network)} </p>
+            <p>número de teléfono: ${manejando_nulls(data.abuse?.phone)} </p>
             
             `
         })
