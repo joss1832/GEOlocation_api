@@ -11,7 +11,8 @@ html, body{
 
 
 body {
-  background-image: url("/assets/img/fondo2.jpg");
+  /*background-image: url("/assets/img/fondo2.jpg");*/
+  background-color: aqua;
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center;
