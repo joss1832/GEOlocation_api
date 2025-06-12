@@ -9,7 +9,7 @@ html, body{
     padding: 0;
 }
 
-
+/*aqui comienzan las especificaciones del body y su fondo*/
 body {
   background-image: url("../assets/img/fondo2.jpg");
   background-repeat: no-repeat;
@@ -19,6 +19,7 @@ body {
   color: aliceblue;
   font-family: Roboto
 }
+/*aqui terminan las especificaciones del body y su fondo*/
 
 
 /*aqui comienzan las especificaciones del contenedor para pedir la ip al usuario*/
@@ -47,7 +48,7 @@ body {
 
 #geolocalizacion {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*indicamos que los elemntos deben estar en una sola liena y si no hay espacio salten a la otra*/
     justify-content: center;
     gap: 20px;
     margin-top: 40px;
@@ -83,6 +84,6 @@ body {
 
 
 
-/*especificaciones de las tarjetas donde se mostrara la informacion de la ip*/
+/*aqui terminan las especificaciones de las tarjetas donde se mostrara la informacion de la ip*/
 
 

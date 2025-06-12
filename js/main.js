@@ -2,21 +2,21 @@ window.onload = () => {
     const ipInput = document.querySelector('#ip');//apunto al input
     const btnBusqueda = document.querySelector('#buscar');//apunto al boton
     const info1 = document.querySelector('#info_api_1');//apunto al div con la primera parte de la informacion
-    const info2 = document.querySelector('#info_api_2')
+    const info2 = document.querySelector('#info_api_2')//apunto al div con la segunda parte de la informacion 
 
 
-    function manejando_nulls(valor){
+    function manejando_nulls(valor){ //manejamos los valores nulos, indefinidos o vacios
         return (valor === null || valor === undefined || valor === "") ? 'no disponible' : valor;
     }
     
 
-    btnBusqueda.addEventListener('click', () =>{
-        const ip= ipInput.value.toLowerCase().trim();
+    btnBusqueda.addEventListener('click', () =>{ //escuchamos el click del usuario
+        const ip= ipInput.value.toLowerCase().trim();//obetenemos el valor del input y lo convertimos todo a minusculas eliminando espacios
         const apiKey = '64b1d8e98540414ec5e3b8f2984a3b72'
-        document.querySelector('#geolocalizacion').style.display = 'flex';
+        document.querySelector('#geolocalizacion').style.display = 'flex';//mostramos el div oculto
         
 
-        if (ip === ""){
+        if (ip === ""){ // por si se le ocurre no escribir nada
             info1.innerHTML = '<p style="color: red;">Por favor ingresa una dirección IP.</p>';
             info2.innerHTML = '<p style="color: red;">Por favor ingresa una dirección IP.</p>';
             return;
@@ -24,11 +24,11 @@ window.onload = () => {
 
         const url = `https://www.iplocate.io/api/lookup/${ip}?apikey=${apiKey}`;
 
-        fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
+        fetch(url)//hacemos la peticion a la api 
+        .then((response) => response.json())//la convertimos a json
+        .then((data) => { //mostramos los datos en la consola 
             console.log('datos recibidos', data)
-
+            //agregamos la primera parte de la info al primer div
             info1.innerHTML= `
             <h3>DATOS BASE</h3>
             <p>IP: ${manejando_nulls(data.ip)}</p>
@@ -40,7 +40,7 @@ window.onload = () => {
             <p>Continente: ${manejando_nulls(data.continent)}</p>
             
             `
-
+            //agregamos la info faltante al segundo div, hago uso del operador ? para evitar errores por si data.abuse no existe
             info2.innerHTML = `
             <h3>Datos de contacto de abuso</h3>
             <p>dirección: ${manejando_nulls(data.abuse?.address)}</p>
